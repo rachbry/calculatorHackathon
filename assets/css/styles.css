@@ -135,5 +135,11 @@ a {
     width: 6.5em;
 }
 
+area {
+    cursor: pointer;
+}
 
+img[usemap] {
+    position: relative;
+}
 
