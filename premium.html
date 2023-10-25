@@ -22,11 +22,11 @@
     <div class="calculator">
         <div class="calculator__wrapper">
             <div class="output">
-                <div class="previous-operand">
+                <div data-previous-operand class="previous-operand">
                     123123123123123
                 </div>
-                <div class="current-operand">
-                    456123123123123123
+                <div data-current-operand class="current-operand">
+                    456123123123123123456123123123123123
                 </div>
             </div>
             <img src="assets/images/calculator-index.png" alt="Scientific calculator" class="calculator__img">
@@ -72,8 +72,8 @@
             </div> -->
         <!--footer menu-->
 
-        <div class="footer footer--prem">
-            <ul class="nav nav--prem">
+        <div class="footer footer__prem">
+            <ul class="nav nav__prem">
                 <li class="nav-item"><a href="index.html"
                         aria-label="link to scientific calculator with original theme">1</a></li>
                 <li class="nav-item"><a href="my-little-pony.html"
@@ -83,7 +83,14 @@
                 <li class="nav-item"><a href="halloween.html"
                         aria-label="link to scientific calculator with halloween theme">4</a></li>
             </ul>
-            <button class="mute-btn" id="muteBtn">mute</button>
+            
+            <div class="mute-switch">
+                <p>mute</p>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+            </div>
             <p class=""><a href="premium.html" aria-label="link to scientific calculator with premium benefits"
                     class="nav-prem nav__prem--active">premium</a></p>
         </div>

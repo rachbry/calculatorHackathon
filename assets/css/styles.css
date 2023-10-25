@@ -29,7 +29,7 @@ a {
 /*-------------------------------------------------------------------------Footer */
 .footer {
     min-height: 5em;
-    min-width: 60%;
+    min-width: 710px;
     background-color: #111111;
     color: white;
     border-radius: 5px;
@@ -52,11 +52,16 @@ a {
 }
 
 .mute-btn {
-
+    background: none;
+	color: white;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit
 }
 
-.nav__prem a,
-.footer .btn {
+.nav__prem a {
     color: #fafafa;
     border: none;
 }
@@ -65,6 +70,77 @@ a {
 .footer .nav__index--active {
     color: #ea6e3d;
 }
+
+/*-------------------------------------------------------------------------Mute switch */
+.mute-switch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+
+ /* The switch - the box around the slider */
+ .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #111111;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #ea6e3d;
+  }
+  
+  input:focus + .slider {
+    box-shadow: none;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  } 
 
 /*-------------------------------------------------------------------------Calculator */
 
@@ -79,16 +155,16 @@ a {
 
 .output {
     position: absolute;
-    background-color: #ea6e3d;
+    /* background-color: #ea6e3d; */
     display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
+    align-items: center;
+    justify-content: space-around;
     flex-direction: column;
-    width: 700px;
+    width: 690px;
     height: 20%;
     top: 8%;
     left: 52px;
-    padding: 1em;
+    padding: .8em;
     word-wrap: break-word;
     word-break: break-all;
     z-index: 2;
@@ -97,15 +173,19 @@ a {
 .output .previous-operand {
     width: 100%;
     color: rgba(255, 255, 255, .75);
-    font-size: 2.5em;
+    font-size: 1.8em;
+    line-height: 0.8em;
     z-index: 3;
+    text-align: end;
 }
 
 .output .current-operand {
     width: 100%;
     color: white;
-    font-size: 3.5em;
+    font-size: 3em;
+    line-height: 0.8em;
     z-index: 4;
+    text-align: end;
 }
 
 .calculator__img {
