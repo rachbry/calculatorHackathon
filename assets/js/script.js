@@ -97,6 +97,9 @@ const deleteButton = document.querySelector('[data-delete]');
 const allClearButton = document.querySelector('[data-all-clear]');
 const previousOperandTextElement = document.querySelector('[data-previous-operand]');
 const currentOperandTextElement = document.querySelector('[data-current-operand]');
+// new buttons
+const piButton = document.querySelector('[data-pi]');
+
 
 const calculator = new Calculator(previousOperandTextElement, currentOperandTextElement)
 
@@ -126,5 +129,12 @@ allClearButton.addEventListener('click', button => {
 
 deleteButton.addEventListener('click', button => {
     calculator.delete()
+    calculator.updateDisplay()
+})
+
+// new buttons
+
+piButton.addEventListener('click', () => {
+    calculator.appendNumber(Math.PI);
     calculator.updateDisplay()
 })
