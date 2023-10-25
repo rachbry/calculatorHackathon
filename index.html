@@ -21,15 +21,51 @@
             </div>
         </div>
         <!--Calculator svg-->
-        <div class="row calculator">
-            <div class="col-10 d-flex justify-content-between align-items-center mx-auto">
-                <img src="assets/images/calculator-index.png" alt="Scientific calculator" class="mx-auto w-100 calculator__img">
+        <div class="calculator">
+            <div>
+
+                <img src="assets/images/calculator-index.png" alt="Scientific calculator"
+                    class="calculator__img" usemap="#image-map">
+
+                <map name="image-map">
+                    <area alt="sin" title="sin" data-advanced coords="39,194,142,270" shape="rect">
+                    <area alt="cos" title="cos" data-advanced coords="40,270,142,346" shape="rect">
+                    <area alt="tan" title="tan" data-advanced coords="39,347,142,422" shape="rect">
+                    <area alt="(" title="(" data-advanced coords="39,423,143,498" shape="rect">
+                    <area alt="x2" title="x2" data-advanced coords="141,192,245,271" shape="rect">
+                    <area alt="x3" title="x3" data-advanced coords="141,271,245,346" shape="rect">
+                    <area alt="+/-" title="+/-" data-advanced coords="143,346,245,423" shape="rect">
+                    <area alt=")" title=")" data-advanced coords="143,422,245,497" shape="rect">
+                    <area alt="%" title="%" data-percent coords="245,194,349,271" shape="rect">
+                    <area alt="sqrt" title="sqrt" data-sqrt coords="245,270,349,348" shape="rect">
+                    <area alt="pi" title="pi" data-advanced coords="243,347,349,423" shape="rect">
+                    <area alt="ac" title="ac" data-all-clear coords="242,422,349,497" shape="rect">
+                    <area alt="7" title="7" data-number coords="349,194,418,270" shape="rect">
+                    <area alt="4" title="4" data-number coords="347,270,418,347" shape="rect">
+                    <area alt="1" title="1" data-number coords="348,346,419,422" shape="rect">
+                    <area alt="0" title="0" data-number coords="348,422,418,498" shape="rect">
+                    <area alt="8" title="8" data-number coords="416,194,486,271" shape="rect">
+                    <area alt="5" title="5" data-number coords="417,270,486,347" shape="rect">
+                    <area alt="2" title="2" data-number coords="418,345,486,423" shape="rect">
+                    <area alt="." title="." data-number coords="417,423,485,498" shape="rect">
+                    <area alt="9" title="9" data-number coords="485,194,555,271" shape="rect">
+                    <area alt="6" title="6" data-number coords="485,272,555,347" shape="rect">
+                    <area alt="3" title="3" data-number coords="483,346,555,423" shape="rect">
+                    <area alt="del" title="del" data-delete coords="485,422,555,498" shape="rect">
+                    <area alt="m+" title="m+" data-advanced coords="554,193,658,270" shape="rect">
+                    <area alt="x" title="x" data-operation coords="554,271,658,346" shape="rect">
+                    <area alt="+" title="+" data-operation coords="554,344,657,422" shape="rect">
+                    <area alt="=" title="=" data-equals coords="554,423,762,499" shape="rect">
+                    <area alt="mr" title="mr" data-advanced coords="657,191,761,271" shape="rect">
+                    <area alt="/" title="/" data-operation coords="657,269,762,348" shape="rect">
+                    <area alt="-" title="-" data-operation coords="656,346,761,422" shape="rect">
+                </map>
             </div>
-            <!-- <div class="calculator-grid">
-                <div class="output">
-                    <div class="previous-operand" data-previous-operand></div>
-                    <div class="current-operand" data-current-operand></div>
-                </div>
+        </div>
+        <!-- <div class="calculator-grid">
+                <div class="previous-operand" data-previous-operand></div>
+                <div class="current-operand" data-current-operand></div>
+                
                 <button type="button" data-all-clear>AC</button>
                 <button type="button" data-delete>DEL</button>
                 <button type="button" data-operation>÷</button>
@@ -48,8 +84,8 @@
                 <button type="button" data-number>.</button>
                 <button type="button" data-number>0</button>
                 <button class="span-two" type="button" data-equals>=</button> -->
-                <!-- These do not do anything -->
-                <!-- <button type="button" data-percent>%</button>
+        <!-- These do not do anything -->
+        <!-- <button type="button" data-percent>%</button>
                 <button type="button" data-sqrt>√</button>
                 <button type="button" data-advanced>π</button>
                 <button type="button" data-advanced>x²</button>
@@ -62,24 +98,27 @@
                 <button type="button" data-advanced>tan</button>
                 <button type="button" data-advanced>M+</button>
                 <button type="button" data-advanced>MR</button>
-            </div>
-        </div> -->
-        <!--footer menu-->
-        <div class="row mt-5 justify-content-between align-items-center">
-            <div class="col-10 d-flex justify-content-around align-items-center mx-auto footer">
-                <ul class="navbar list-unstyled d-flex justify-content-between align-items-center gap-5 my-auto">
-                    <li class="nav-item"><a href="index.html" aria-label="link to scientific calculator with original theme">1</a></li>
-                    <li class="nav-item"><a href="my-little-pony.html" aria-label="link to scientific calculator with my little pony theme">2</a></li>
-                    <li class="nav-item"><a href="grunge-gothic.html" aria-label="link to scientific calculator with grunge gothic theme">3</a></li>
-                    <li class="nav-item"><a href="halloween.html" aria-label="link to scientific calculator with halloween theme">4</a></li>
-                </ul>
-                <button class="mute-btn my-auto" id="muteBtn">mute</button>
-                <p class="my-auto premium-link"><a href="premium.html" aria-label="link to scientific calculator with premium benefits">premium</a></p>
-            </div>
-        </div>
-
+            </div> -->
     </div>
-    
+    <!--footer menu-->
+    <div class="row mt-5 justify-content-between align-items-center">
+        <div class="col-10 d-flex justify-content-around align-items-center mx-auto footer">
+            <ul class="navbar list-unstyled d-flex justify-content-between align-items-center gap-5 my-auto">
+                <li class="nav-item"><a href="index.html"
+                        aria-label="link to scientific calculator with original theme">1</a></li>
+                <li class="nav-item"><a href="my-little-pony.html"
+                        aria-label="link to scientific calculator with my little pony theme">2</a></li>
+                <li class="nav-item"><a href="grunge-gothic.html"
+                        aria-label="link to scientific calculator with grunge gothic theme">3</a></li>
+                <li class="nav-item"><a href="halloween.html"
+                        aria-label="link to scientific calculator with halloween theme">4</a></li>
+            </ul>
+            <button class="mute-btn my-auto" id="muteBtn">mute</button>
+            <p class="my-auto premium-link"><a href="premium.html"
+                    aria-label="link to scientific calculator with premium benefits">premium</a></p>
+        </div>
+    </div>
+
 
     <!--Javascript-->
     <script src="assets/js/script.js" defer></script>
