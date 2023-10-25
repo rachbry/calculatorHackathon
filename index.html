@@ -1,51 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
+    <!--Bootstrap css-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!--Stylesheet css-->
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body>
-    <div class="calculator-grid">
-        <div class="output">
-            <div class="previous-operand" data-previous-operand></div>
-            <div class="current-operand" data-current-operand></div>
-        </div>
-        <button type="button" data-all-clear>AC</button>
-        <button type="button" data-delete>DEL</button>
-        <button type="button" data-operation>÷</button>
-        <button type="button" data-number>1</button>
-        <button type="button" data-number>2</button>
-        <button type="button" data-number>3</button>
-        <button type="button" data-operation>x</button>
-        <button type="button" data-number>4</button>
-        <button type="button" data-number>5</button>
-        <button type="button" data-number>6</button>
-        <button type="button" data-operation>+</button>
-        <button type="button" data-number>7</button>
-        <button type="button" data-number>8</button>
-        <button type="button" data-number>9</button>
-        <button type="button" data-operation>-</button>
-        <button type="button" data-number>.</button>
-        <button type="button" data-number>0</button>
-        <button class="span-two" type="button" data-equals>=</button>
-     <!-- These do not do anything -->
-        <button type="button" data-percent>%</button>
-        <button type="button" data-sqrt>√</button>
-        <button type="button" data-advanced>π</button>
-        <button type="button" data-advanced>x²</button>
-        <button type="button" data-advanced>x³</button>
-        <button type="button" data-advanced>+/-</button>
-        <button type="button" data-advanced>(</button>
-        <button type="button" data-advanced>)</button>
-        <button type="button" data-advanced>sin</button>
-        <button type="button" data-advanced>cos</button>
-        <button type="button" data-advanced>tan</button>
-        <button type="button" data-advanced>M+</button>
-        <button type="button" data-advanced>MR</button>
-    </div>
 
-<script src="assets/js/script.js" defer></script>
+<body>
+    <div class="container">
+        <!--logo svg-->
+        <div class="row mt-5">
+            <div class="col-10 d-flex justify-content-between align-items-center mx-auto">
+                <img src="assets/images/calculator-1-icon.svg" alt="Graduation cap logo" class="mx-auto w-25">
+            </div>
+        </div>
+        <!--Calculator svg-->
+        <div class="row mt-5">
+            <div class="col-10 d-flex justify-content-between align-items-center mx-auto">
+                <img src="assets/images/calculator-index.png" alt="Scientific calculator" class="mx-auto w-100 calculator__img">
+            </div>
+            <!-- <div class="calculator-grid">
+                <div class="output">
+                    <div class="previous-operand" data-previous-operand></div>
+                    <div class="current-operand" data-current-operand></div>
+                </div>
+                <button type="button" data-all-clear>AC</button>
+                <button type="button" data-delete>DEL</button>
+                <button type="button" data-operation>÷</button>
+                <button type="button" data-number>1</button>
+                <button type="button" data-number>2</button>
+                <button type="button" data-number>3</button>
+                <button type="button" data-operation>x</button>
+                <button type="button" data-number>4</button>
+                <button type="button" data-number>5</button>
+                <button type="button" data-number>6</button>
+                <button type="button" data-operation>+</button>
+                <button type="button" data-number>7</button>
+                <button type="button" data-number>8</button>
+                <button type="button" data-number>9</button>
+                <button type="button" data-operation>-</button>
+                <button type="button" data-number>.</button>
+                <button type="button" data-number>0</button>
+                <button class="span-two" type="button" data-equals>=</button> -->
+                <!-- These do not do anything -->
+                <!-- <button type="button" data-percent>%</button>
+                <button type="button" data-sqrt>√</button>
+                <button type="button" data-advanced>π</button>
+                <button type="button" data-advanced>x²</button>
+                <button type="button" data-advanced>x³</button>
+                <button type="button" data-advanced>+/-</button>
+                <button type="button" data-advanced>(</button>
+                <button type="button" data-advanced>)</button>
+                <button type="button" data-advanced>sin</button>
+                <button type="button" data-advanced>cos</button>
+                <button type="button" data-advanced>tan</button>
+                <button type="button" data-advanced>M+</button>
+                <button type="button" data-advanced>MR</button>
+            </div>
+        </div> -->
+        <!--footer menu-->
+        <div class="row">
+
+        </div>
+    </div>
+    
+
+    <!--Javascript-->
+    <script src="assets/js/script.js" defer></script>
+    <!--Bootstrap Bundle-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
