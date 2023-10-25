@@ -39,6 +39,10 @@ a {
     align-items: center;
 }
 
+.footer__mlp {
+    background-color: #9cdbfa;
+}
+
 .nav {
     display: flex;
     justify-content: space-around;
@@ -59,6 +63,15 @@ a {
 	font: inherit;
 	cursor: pointer;
 	outline: inherit
+}
+
+.nav__mlp a {
+    color: #1d98d3;
+    border: none;
+}
+
+.active--mlp {
+    color: fafafa;
 }
 
 .nav__prem a {
@@ -211,7 +224,8 @@ a {
     margin-top: 5em;
 }
 
-.logo__index {
+.logo__index,
+.logo__mlp {
     width: 6.5em;
 }
 
