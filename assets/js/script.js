@@ -396,3 +396,77 @@ memoryRecallButton.addEventListener('click', () => {
     }
 });
 
+// functions to call sound effects
+
+//generic skin sound effects
+function sound1(){
+    var snd = new Audio('/assets/audio/1.mp3')
+    snd.play()//plays the sound
+}
+function sound2(){
+    var snd = new Audio('/assets/audio/2.mp3')
+    snd.play()//plays the sound
+}
+function sound3(){
+    var snd = new Audio('/assets/audio/3.mp3')
+    snd.play()//plays the sound
+}
+function sound4(){
+    var snd = new Audio('/assets/audio/4.mp3')
+    snd.play()//plays the sound
+}
+function sound5(){
+    var snd = new Audio('/assets/audio/5.mp3')
+    snd.play()//plays the sound
+}
+function sound6(){
+    var snd = new Audio('/assets/audio/6.mp3')
+    snd.play()//plays the sound
+}
+function sound7(){
+    var snd = new Audio('/assets/audio/7.mp3')
+    snd.play()//plays the sound
+}
+function sound8(){
+    var snd = new Audio('/assets/audio/8.mp3')
+    snd.play()//plays the sound
+}
+function sound9(){
+    var snd = new Audio('/assets/audio/9.mp3')
+    snd.play()//plays the sound
+}
+function sound0(){
+    var snd = new Audio('/assets/audio/0.mp3')
+    snd.play()//plays the sound
+}
+
+function soundEquals(){
+    var snd = new Audio('/assets/audio/equals.mp3')
+    snd.play()//plays the sound
+}
+
+function soundOperator(){
+    var snd = new Audio('/assets/audio/operators.mp3')
+    snd.play()//plays the sound
+}
+
+function soundDot(){
+    var snd = new Audio('/assets/audio/dot.mp3')
+    snd.play()//plays the sound
+}
+
+// halloween skin sound effects
+function horrorNumberSound(){
+    var snd = new Audio('/assets/audio/horror-numbers.mp3')
+    snd.play()//plays the sound for all numbers
+}
+ 
+function horrorNumberOperator(){
+    var snd = new Audio('/assets/audio/horror-operators.mp3')
+    snd.play()//plays the sound for all numbers
+}
+
+function horrorNumberEquals(){
+    var snd = new Audio('/assets/audio/horror-equals.mp3')
+    snd.play()//plays the sound for all numbers
+}
