@@ -378,12 +378,29 @@ cosButton.addEventListener('click', () => {
 //Tips Events//
 
 percentageButton.addEventListener('click', () => {
+
     let heading = document.getElementById('tipsTitle');
     let text = document.getElementById('tipsText');
+    let link = `<a href="https://byjus.com/maths/percentage/"
+    aria-label="link to a web page with more info on percentages" target="_blank">Learn more</a>`;
 
-    heading.innerText = "Tip";
-    text.innerText = `In mathematics, a percentage is a number or ratio that can be expressed as a fraction of 100. If we have to calculate percent of a number, divide the number by the whole and multiply by 100. Hence, the percentage means, a part per hundred. The word per cent means per 100. It is represented by the symbol “%”`;
-    text.innerText += `<a `
+    heading.innerText = "Percentage";
+    text.innerHTML = `In mathematics, a percentage is a number or ratio that can be expressed as a fraction of 100. If we have to calculate percent of a number, divide the number by the whole and multiply by 100. Hence, the percentage means, a part per hundred. The word per cent means per 100. It is represented by the symbol “%”`;
+    text.innerHTML += `<br>${link}`;
+
+})
+
+sqrtButton.addEventListener('click', () => {
+
+    let heading = document.getElementById('tipsTitle');
+    let text = document.getElementById('tipsText');
+    let link = `<a href="https://byjus.com/maths/square-root/"
+    aria-label="link to a web page with more info on square root" target="_blank">Learn more</a>`;
+
+    heading.innerText = "Square Root";
+    text.innerHTML = `Square root of a number is a value, which on multiplication by itself, gives the original number. The square root is an inverse method of squaring a number. Hence, squares and square roots are related concepts.`;
+    text.innerHTML += `<br>${link}`;
+
 })
 
 

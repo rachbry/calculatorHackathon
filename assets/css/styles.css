@@ -276,6 +276,15 @@ input:checked + .slider:before {
     margin-bottom: 1em;
 }
 
+.calculator__tips a {
+    color: #ea6e3d;
+}
+
+.calculator__tips a:hover {
+    color: #1d98d3;
+}
+
+
 /*-------------------------------------------------------------------------Calculator output*/
 
 .output {
