@@ -3,6 +3,8 @@ class Calculator {
         this.previousOperandTextElement = previousOperandTextElement
         this.currentOperandTextElement = currentOperandTextElement
         this.clear()
+        // Create an array to store the computations for the history table
+        this.history = [];
     }
 
     clear() {
@@ -115,9 +117,15 @@ class Calculator {
             default:
                 return
         }
+
+        this.history.push({
+            calculation: `${this.getDisplayNumber(prev)} ${this.operation} ${this.getDisplayNumber(current)}`,
+        });
+
         this.currentOperand = computation
         this.operation = undefined
         this.previousOperand = ''
+
     }
     /**
      * Adds commas to long numbers to tidy up the display.
@@ -141,32 +149,7 @@ class Calculator {
             return integerDisplay
         }
     }
-    // PASTED OLD VERSION UNDERNEATH
-    // updateDisplay() {
-    //     this.currentOperandTextElement.innerText = this.getDisplayNumber(this.currentOperand);
 
-    //     if (this.operation != null) {
-    //         if (this.operation === '%') {
-    //             this.previousOperandTextElement.innerText = `${this.getDisplayNumber(this.previousOperand)} ${this.operation}`;
-    //         }
-    //         else if (this.operation === '√') {
-    //             // don't think this is working
-    //             this.previousOperandTextElement.innerText = `${this.operation} ${this.getDisplayNumber(this.previousOperand)}`;
-    //         }
-    //         else if (this.operation === 'sin') {
-    //             this.currentOperandTextElement.innerText = `${this.operation}(${this.getDisplayNumber(this.currentOperand)})`;
-    //         }
-    //         else if (this.operation === 'tan') {
-    //             this.currentOperandTextElement.innerText = `${this.operation}(${this.getDisplayNumber(this.currentOperand)})`;
-    //         }
-    //         else if (this.operation === 'cos') {
-    //             this.currentOperandTextElement.innerText = `${this.operation}(${this.getDisplayNumber(this.currentOperand)})`;
-    //         }
-    //     }
-    //         else {
-    //         this.previousOperandTextElement.innerText = this.getDisplayNumber(this.previousOperand);
-    //         }
-    // }
 
     updateDisplay() {
         this.currentOperandTextElement.innerText = this.getDisplayNumber(this.currentOperand);
@@ -180,6 +163,41 @@ class Calculator {
         } else {
             this.previousOperandTextElement.innerText = this.getDisplayNumber(this.previousOperand);
         }
+    }
+
+    updateHistory() {
+        const historyTable = document.getElementById('history-table');
+
+        let row = historyTable.insertRow();
+        let historyDelete = row.insertCell(0);
+        let historyCalc = row.insertCell(1);
+        let historyResult = row.insertCell(2);
+
+
+        // calls the most recent entry in the history array
+        const latestEntryHistory = this.history[this.history.length - 1];
+
+        let deleteButton = document.createElement('button');
+        deleteButton.className = "delete-button";
+        deleteButton.onclick = "remove(this)";
+        deleteButton.innerHTML = 'X';
+
+        // DELETES THE ROW IN THE HISTORY TABLE //
+        deleteButton.addEventListener('click', function () {
+            const row = this.parentNode.parentNode;
+            row.parentNode.removeChild(row);
+        })
+
+        historyCalc.innerText = latestEntryHistory.calculation;
+        historyResult.innerText = this.getDisplayNumber(this.currentOperand);
+        historyDelete.appendChild(deleteButton);
+
+        row.appendChild(historyDelete);
+        row.appendChild(historyCalc);
+        row.appendChild(historyResult);
+
+
+        historyTable.appendChild(row);
     }
 }
 
@@ -210,73 +228,9 @@ const cosButton = document.querySelector('[data-cos]');
 const tanButton = document.querySelector('[data-tan]');
 
 
-// Number buttons
-// const num1 = document.querySelector('[data-1]');
-// const num2 = document.querySelector('[data-2]');
-// const num3 = document.querySelector('[data-3]');
-// const num4 = document.querySelector('[data-4]');
-// const num5 = document.querySelector('[data-5]');
-// const num6 = document.querySelector('[data-6]');
-// const num7 = document.querySelector('[data-7]');
-// const num8 = document.querySelector('[data-8]');
-// const num9 = document.querySelector('[data-9]');
-// const num0 = document.querySelector('[data-0]');
-
-// num1.value = "1";
-// num2.value = "2";
-// num3.value = "3";
-// num4.value = "4";
-// num5.value = "5";
-// num6.value = "6";
-// num7.value = "7";
-// num8.value = "8";
-// num9.value = "9";
-// num0.value = "0";
-
 
 const calculator = new Calculator(previousOperandTextElement, currentOperandTextElement)
 
-// -------number buttons event listeners---------------- //
-// num1.addEventListener('click', () => {
-//     calculator.appendNumber(num1.value);
-//     calculator.updateDisplay();
-// });
-// num2.addEventListener('click', () => {
-//     calculator.appendNumber(num2.value);
-//     calculator.updateDisplay();
-// });
-// num3.addEventListener('click', () => {
-//     calculator.appendNumber(num3.value);
-//     calculator.updateDisplay();
-// });
-// num4.addEventListener('click', () => {
-//     calculator.appendNumber(num4.value);
-//     calculator.updateDisplay();
-// });
-// num5.addEventListener('click', () => {
-//     calculator.appendNumber(num5.value);
-//     calculator.updateDisplay();
-// });
-// num6.addEventListener('click', () => {
-//     calculator.appendNumber(num6.value);
-//     calculator.updateDisplay();
-// });
-// num7.addEventListener('click', () => {
-//     calculator.appendNumber(num7.value);
-//     calculator.updateDisplay();
-// });
-// num8.addEventListener('click', () => {
-//     calculator.appendNumber(num8.value);
-//     calculator.updateDisplay();
-// });
-// num9.addEventListener('click', () => {
-//     calculator.appendNumber(num9.value);
-//     calculator.updateDisplay();
-// });
-// num0.addEventListener('click', () => {
-//     calculator.appendNumber(num0.value);
-//     calculator.updateDisplay();
-// });
 
 const numberElements = document.querySelectorAll('[data-number]');
 
@@ -303,6 +257,8 @@ operationElements.forEach(element => {
 equalsButton.addEventListener('click', () => {
     calculator.compute();
     calculator.updateDisplay();
+        // STORE CALCULATIONS//
+        calculator.updateHistory();
 })
 
 allClearButton.addEventListener('click', button => {
@@ -532,7 +488,7 @@ function horrorNumberSound(){
     var snd = new Audio('/assets/audio/horror-numbers.mp3')
     snd.play()//plays the sound for all numbers
 }}
- 
+
 function horrorNumberOperator(){
     if (!isSoundMute){
     var snd = new Audio('/assets/audio/horror-operators.mp3')
