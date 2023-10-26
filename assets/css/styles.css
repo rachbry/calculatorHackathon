@@ -19,6 +19,10 @@ a {
     text-decoration: none;
 }
 
+ul {
+    list-style-type: none;
+}
+
 /*-------------------------------------------------------------------------Backgrounds */
 .premium__background {
     background-image: linear-gradient(350deg, #111111, #fafafa);
@@ -30,6 +34,34 @@ a {
     background-image: linear-gradient(350deg, #662d8b, #9cdbfa);
     background-repeat: no-repeat;
     height: 100vh;
+}
+
+.grungegoth__background {
+    position: relative;
+    background-image: linear-gradient(350deg, #111111, #ef4144af);
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.halloween__background {
+    position: relative;
+    background-image: linear-gradient(350deg, #111111, #1d1d1d);
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.halloween__bg {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+.grungegoth__bg {
+    position: absolute;
+    top: 20em;
+    width: 100%;
+    z-index: -1;
 }
 
 /*-------------------------------------------------------------------------Footer */
@@ -49,6 +81,10 @@ a {
     background-color: #9cdbfa;
 }
 
+.footer__halloween {
+    background-color: #ef4143;
+}
+
 .nav {
     display: flex;
     justify-content: space-around;
@@ -57,7 +93,7 @@ a {
     margin: auto 0;
 }
 
-.nav__prem {    
+.nav {    
     padding: 0;
 }
 
@@ -76,17 +112,29 @@ a {
     border: none;
 }
 
-.active--mlp a{
+.active--mlp a {
     color: #fafafa;
 }
 
-.nav__prem a {
+.nav__prem a,
+.nav__halloween a {
     color: #fafafa;
     border: none;
 }
 
-.footer .nav__prem--active,
-.footer .nav__index--active {
+.active--index a {
+    color: #ea6e3d;
+}
+
+.active--grungegoth a {
+    color: #ef4143;
+}
+
+.active--halloween a {
+    color: #111111;
+}
+
+.footer .nav__prem--active {
     color: #ea6e3d;
 }
 
@@ -129,6 +177,21 @@ p a {
     -webkit-transition: .4s;
     transition: .4s;
   }
+
+  .slider--index:before,
+  .slider--prem:before,
+  .slider--grungegoth:before,
+  .slider--halloween:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #111111;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
   
   .slider--mlp:before {
     position: absolute;
@@ -146,7 +209,9 @@ p a {
     background-color: #ea6e3d;
   }
 
-  input:checked + .slider--mlp {
+  input:checked + .slider--mlp,
+  input:checked + .slider--grungegoth,
+  input:checked + .slider--halloween {
     background-color: #ef4143;
   }
   
@@ -241,6 +306,11 @@ p a {
 .logo__index,
 .logo__mlp {
     width: 6.5em;
+}
+
+.logo__grungegoth,
+.logo__halloween {
+    height: 51px;
 }
 
 area {
