@@ -170,9 +170,7 @@ class Calculator {
 
         let row = historyTable.insertRow();
         let historyDelete = row.insertCell(0);
-        let historyCalc = row.insertCell(1);
-        let historyResult = row.insertCell(2);
-
+        let historyData = row.insertCell(1);
 
         // calls the most recent entry in the history array
         const latestEntryHistory = this.history[this.history.length - 1];
@@ -187,15 +185,14 @@ class Calculator {
             const row = this.parentNode.parentNode;
             row.parentNode.removeChild(row);
         })
+        // created a string from the calculation and the result instead
+        const historyString = `${latestEntryHistory.calculation} = ${this.getDisplayNumber(this.currentOperand)}`;
 
-        historyCalc.innerText = latestEntryHistory.calculation;
-        historyResult.innerText = this.getDisplayNumber(this.currentOperand);
+        historyData.innerText = historyString;
         historyDelete.appendChild(deleteButton);
 
+        row.appendChild(historyString);
         row.appendChild(historyDelete);
-        row.appendChild(historyCalc);
-        row.appendChild(historyResult);
-
 
         historyTable.appendChild(row);
     }
