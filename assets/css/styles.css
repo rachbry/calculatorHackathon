@@ -328,7 +328,23 @@ input:checked + .slider:before {
     box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.3);
 }
 
+.cover-up-1 {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    left: 10%;
+    bottom: 11%;
+    background-color: #2f2f2f;
+}
 
+.cover-up-2 {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    left: 23%;
+    bottom: 11%;
+    background-color: #2f2f2f;
+}
 
 /*-------------------------------------------------------------------------logo svg */
 .logo {
