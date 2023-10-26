@@ -141,7 +141,7 @@ class Calculator {
             return integerDisplay
         }
     }
-// PASTED OLD VERSION UNDERNEATH
+    // PASTED OLD VERSION UNDERNEATH
     // updateDisplay() {
     //     this.currentOperandTextElement.innerText = this.getDisplayNumber(this.currentOperand);
 
@@ -375,6 +375,18 @@ cosButton.addEventListener('click', () => {
     calculator.updateDisplay();
 })
 
+//Tips Events//
+
+percentageButton.addEventListener('click', () => {
+    let heading = document.getElementById('tipsTitle');
+    let text = document.getElementById('tipsText');
+
+    heading.innerText = "Tip";
+    text.innerText = `In mathematics, a percentage is a number or ratio that can be expressed as a fraction of 100. If we have to calculate percent of a number, divide the number by the whole and multiply by 100. Hence, the percentage means, a part per hundred. The word per cent means per 100. It is represented by the symbol “%”`;
+    text.innerText += `<a `
+})
+
+
 // Memory buttons//
 const memoryAddButton = document.querySelector('[data-m-plus]');
 const memoryRecallButton = document.querySelector('[data-m-recall]');
@@ -408,154 +420,156 @@ function toggleSoundMute() {
 //generic skin sound effects
 function sound1() {
     if (!isSoundMute) {
-    var snd = new Audio('assets/audio/1.mp3')
+    var snd = new Audio('/assets/audio/1.mp3')
     snd.play()//plays the sound
 }}
 
 function sound2(){
     if (!isSoundMute){
-    var snd = new Audio('assets/audio/2.mp3')
+    var snd = new Audio('/assets/audio/2.mp3')
     snd.play()//plays the sound
 }}
 
 function sound3(){
     if (!isSoundMute){
-    var snd = new Audio('assets/audio/3.mp3')
+    var snd = new Audio('/assets/audio/3.mp3')
     snd.play()//plays the sound
 }}
 
 function sound4(){
     if (!isSoundMute){
-    var snd = new Audio('assets/audio/4.mp3')
+    var snd = new Audio('/assets/audio/4.mp3')
     snd.play()//plays the sound
 }}
 
 function sound5(){
     if (!isSoundMute){
-    var snd = new Audio('assets/audio/5.mp3')
+    var snd = new Audio('/assets/audio/5.mp3')
     snd.play()//plays the sound
 }}
 
 function sound6(){
     if (!isSoundMute){
-    var snd = new Audio('assets/audio/6.mp3')
+    var snd = new Audio('/assets/audio/6.mp3')
     snd.play()//plays the sound
 }}
 
 function sound7(){
     if (!isSoundMute){
-    var snd = new Audio('assets/audio/7.mp3')
+    var snd = new Audio('/assets/audio/7.mp3')
     snd.play()//plays the sound
 }}
 
 function sound8(){
     if (!isSoundMute){
-    var snd = new Audio('assets/audio/8.mp3')
+    var snd = new Audio('/assets/audio/8.mp3')
     snd.play()//plays the sound
 }}
 
 function sound9(){
     if (!isSoundMute){
-    var snd = new Audio('assets/audio/9.mp3')
+    var snd = new Audio('/assets/audio/9.mp3')
     snd.play()//plays the sound
 }}
 
 function sound0(){
     if (!isSoundMute){
-    var snd = new Audio('assets/audio/0.mp3')
+    var snd = new Audio('/assets/audio/0.mp3')
     snd.play()//plays the sound
 }}
 
 function soundEquals(){
     if (!isSoundMute){
-    var snd = new Audio('assets/audio/equals.mp3')
+    var snd = new Audio('/assets/audio/equals.mp3')
     snd.play()//plays the sound
 }}
 
 function soundOperator(){
     if (!isSoundMute){
-    var snd = new Audio('assets/audio/operators.mp3')
+    var snd = new Audio('/assets/audio/operators.mp3')
     snd.play()//plays the sound
 }}
 
 function soundDot(){
     if (!isSoundMute){
-    var snd = new Audio('assets/audio/dot.mp3')
+    var snd = new Audio('/assets/audio/dot.mp3')
     snd.play()//plays the sound
 }}
 
 // halloween skin sound effects
 function horrorNumberSound(){
     if (!isSoundMute){
-    var snd = new Audio('assets/audio/horror-numbers.mp3')
+    var snd = new Audio('/assets/audio/horror-numbers.mp3')
     snd.play()//plays the sound for all numbers
 }}
  
 function horrorNumberOperator(){
     if (!isSoundMute){
-    var snd = new Audio('assets/audio/horror-operators.mp3')
+    var snd = new Audio('/assets/audio/horror-operators.mp3')
     snd.play()//plays the sound for all numbers
 }}
 
 function horrorNumberEquals(){
     if (!isSoundMute){
-    var snd = new Audio('assets/audio/horror-equals.mp3')
+    var snd = new Audio('/assets/audio/horror-equals.mp3')
     snd.play()//plays the sound for all numbers
 }}
 
 // mlp skin sound effects
 function mlpNumbers(){
     if (!isSoundMute){
-    var snd = new Audio('assets/audio/lok.mp3')
+    var snd = new Audio('/assets/audio/lok.mp3')
     snd.play()//plays the sound for all numbers
 }}
 
 function mlpDel(){
     if (!isSoundMute){
-    var snd = new Audio('assets/audio/oh-no.mp3')
+    var snd = new Audio('/assets/audio/oh-no.mp3')
     snd.play()//plays the sound for all numbers
 }}
 
 function mlpEquals(){
     if (!isSoundMute){
-    var snd = new Audio('assets/audio/here-we-go.mp3')
+    var snd = new Audio('/assets/audio/here-we-go.mp3')
     snd.play()//plays the sound for all numbers
 }}
 
 function mlpOperators(){
     if (!isSoundMute){
-    var snd = new Audio('assets/audio/i-did.mp3')
+    var snd = new Audio('/assets/audio/i-did.mp3')
     snd.play()//plays the sound for all numbers
 }}
 
 function mlpAc(){
     if (!isSoundMute){
-    var snd = new Audio('assets/audio/go-away.mp3')
+    var snd = new Audio('/assets/audio/go-away.mp3')
     snd.play()//plays the sound for all numbers
 }}
 
 // grunge skin sound effects
 function grungeNumber(){
     if (!isSoundMute){
-    var snd = new Audio('assets/audio/grunge-numbers.wav')
+    var snd = new Audio('/assets/audio/grunge-numbers.wav')
     snd.play()//plays the sound for all numbers
 }}
 
 function grungeOperator(){
     if (!isSoundMute){
-    var snd = new Audio('assets/audio/grunge-operator.wav')
+    var snd = new Audio('/assets/audio/grunge-operator.wav')
     snd.play()//plays the sound for all numbers
 }}
 
-function grungeEquals(){
-    if (!isSoundMute){
-    var snd = new Audio('assets/audio/grunge-equals.mp3')
-    snd.play()//plays the sound for all numbers
-}}
+function grungeEquals() {
+    if (!isSoundMute) {
+        var snd = new Audio('assets/audio/grunge-equals.mp3')
+        snd.play()//plays the sound for all numbers
+    }
+}
 
 // premium skin sound effects
-function premiumClick(){
-    if (!isSoundMute){
-    var snd = new Audio('assets/audio/button-press.mp3')
-    snd.play()//plays the sound for all numbers
-}}
+function premiumClick() {
+    if (!isSoundMute) {
+        var snd = new Audio('assets/audio/button-press.mp3')
+        snd.play()//plays the sound for all numbers
+    }
+}
