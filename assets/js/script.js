@@ -512,3 +512,9 @@ function grungeEquals(){
     var snd = new Audio('assets/audio/grunge-equals.mp3')
     snd.play()//plays the sound for all numbers
 }
+
+// premium skin sound effects
+function premiumClick(){
+    var snd = new Audio('assets/audio/button-press.mp3')
+    snd.play()//plays the sound for all numbers
+}
