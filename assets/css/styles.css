@@ -23,6 +23,18 @@ ul {
     list-style-type: none;
 }
 
+.calculator__history {
+    overflow: auto;
+}
+
+.delete-button {
+    margin: 0 10px 0 10px;
+    background-color: red;
+    border-radius: 5px;
+    border: none;
+    color: white
+}
+
 /*-------------------------------------------------------------------------Backgrounds */
 .premium__background {
     background-image: linear-gradient(350deg, #111111, #fafafa);
