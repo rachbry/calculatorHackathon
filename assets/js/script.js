@@ -403,6 +403,19 @@ sqrtButton.addEventListener('click', () => {
 
 })
 
+piButton.addEventListener('click', () => {
+
+    let heading = document.getElementById('tipsTitle');
+    let text = document.getElementById('tipsText');
+    let link = `<a href="https://byjus.com/maths/value-of-pi/"
+    aria-label="link to a web page with more info on Pi" target="_blank">Learn more</a>`;
+
+    heading.innerText = "Pi";
+    text.innerHTML = `The value of Pi (π) is the ratio of the circumference of a circle to its diameter and is approximately equal to 3.14159. In a circle, if you divide the circumference (is the total distance around the circle) by the diameter, you will get exactly the same number. Whether the circle is big or small, the value of pi remains the same.`;
+    text.innerHTML += `<br>${link}`;
+
+})
+
 
 // Memory buttons//
 const memoryAddButton = document.querySelector('[data-m-plus]');
