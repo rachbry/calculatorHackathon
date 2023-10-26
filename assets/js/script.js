@@ -543,7 +543,7 @@ function grungeNumber(){
 
 function grungeOperator(){
     if (!isSoundMute){
-    var snd = new Audio('/assets/audio/grunge-operator.wav')
+    var snd = new Audio('assets/audio/grunge-operator.wav')
     snd.play()//plays the sound for all numbers
 }}
 
